@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['10.23.20.171', '10.23.20.189', '127.0.0.1', 'localhost',
 
 # Application definition
 
-sys.path.append("../external_apps")
+sys.path.append("../")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
