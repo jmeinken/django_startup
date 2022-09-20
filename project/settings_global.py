@@ -32,6 +32,8 @@ ALLOWED_HOSTS = ['10.23.20.171', '10.23.20.189', '127.0.0.1', 'localhost',
 # Application definition
 
 sys.path.append("../")
+sys.path.append("../redcap_importer/")
+sys.path.append("../django_user_manager/")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -43,6 +45,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'user_manager',
     'main',
+    'redcap_importer',
+    'main_repo',        # for redcap project 4839 erickson neurobehavioral
 ]
 
 MIDDLEWARE = [
@@ -88,6 +92,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
 # Password validation

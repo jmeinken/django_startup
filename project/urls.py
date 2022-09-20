@@ -19,5 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('user_manager/', include(('user_manager.urls', 'user_manager'), namespace='user_manager')),
+    path('redcap', include(('redcap_importer.urls', 'redcap_importer'), namespace='redcap_importer')),
     path('', include('main.urls')),
 ]

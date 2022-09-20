@@ -2,8 +2,44 @@
 
 {% block content %}
 
-<h1>home</h1>
+    <h1>home</h1>
 
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">
+            Get visit info
+        </button>
+    </form>
+
+    <form method="post" action="{% url 'update_new_visits' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">
+            Update new visits in REDCap
+        </button>
+    </form>
+
+    {% if data_table %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Record ID</th>
+                    <th>Visit Info Age</th>
+                    <th>Subject Studies</th>
+                    <th>Visit Studies</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in data_table %}
+                    <tr>
+                        <td>{{ entry.0 }}</td>
+                        <td>{{ entry.1 }}</td>
+                        <td>{{ entry.2 }}</td>
+                        <td>{{ entry.3 }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
 
 
 {% endblock %}
