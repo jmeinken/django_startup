@@ -1,23 +1,49 @@
-
-
 from .settings import *
 
-SECRET_KEY = 'set_a_secret_key'
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Turn off debug for a production site
 DEBUG = False
 
-LOGIN_URL = '/auth/login?host=chi-dev.uc.edu'
-LOGIN_URL_FOR_LINK = '/auth/login?host=chi-dev.uc.edu&uri=/research/'
-LOGOUT_URL_FOR_LINK = '/auth/logout?host=chi-dev.uc.edu&uri=/research/'
+# get emails when there is a problem
+# ADMINS = [("John", "meinkejf@ucmail.uc.edu")]
 
+# If using a subdirectory, set correct URLs to use
+# FORCE_SCRIPT_NAME = "/neurobehavioral/"
+# STATIC_URL = "/neurobehavioral_static/"
 
-MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    # 'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'user_manager.middleware.ChiAuthLoginMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+# If local login page with django_user_manager, set login/logout URLs
+# LOGIN_URL = "/neurobehavioral/user_manager/login"
+# LOGIN_URL_FOR_LINK = '/neurobehavioral/user_manager/login'
+# LOGOUT_URL_FOR_LINK = '/neurobehavioral/user_manager/logout'
+# LOGOUT_REDIRECT_URL = "/neurobehavioral/user_manager/login"
+# LOGIN_REDIRECT_URL = "/neurobehavioral"
+
+# If you are using CHI Auth login form instead of local login, set those login/logout urls
+# LOGIN_URL = '/auth/login?host=chi-dev.uc.edu'
+# LOGIN_URL_FOR_LINK = '/auth/login?host=chi-dev.uc.edu&uri=/research/'
+# LOGOUT_URL_FOR_LINK = '/auth/logout?host=chi-dev.uc.edu&uri=/research/'
+
+# If you are using CHI Auth login form instead of local login, set correct middleware
+# MIDDLEWARE = [
+#     'django.middleware.security.SecurityMiddleware',
+#     'django.contrib.sessions.middleware.SessionMiddleware',
+#     'django.middleware.common.CommonMiddleware',
+#     'django.middleware.csrf.CsrfViewMiddleware',
+#     # 'django.contrib.auth.middleware.AuthenticationMiddleware',
+#     'user_manager.middleware.ChiAuthLoginMiddleware',
+#     'django.contrib.messages.middleware.MessageMiddleware',
+#     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+# ]
+
+# set CSRF settings
+# CSRF_TRUSTED_ORIGINS = ["https://chi.uc.edu", "https://chi-tools.uc.edu"]
+# CSRF_COOKIE_SECURE = True
+# CSRF_COOKIE_NAME = "csrftoken_neurobehavioral"
+
+# set session settings
+# SESSION_COOKIE_NAME = "sessionid_neurobehavioral"
+# SESSION_COOKIE_AGE = 15*60
+# SESSION_SAVE_EVERY_REQUEST = True
+# SESSION_COOKIE_SECURE = True
