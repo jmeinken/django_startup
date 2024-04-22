@@ -159,7 +159,7 @@ DATE_FORMAT = "m/d/Y"
 # SITE GENERAL CONFIGURATION #################################################
 
 SITE_TITLE = "My Website"
-SITE_CONTACT_EMAIL = "meinkejf@ucmail.uc.edu"
+SITE_CONTACT_EMAIL = "john.meinken@cchmc.org"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 

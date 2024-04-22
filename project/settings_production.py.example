@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = False
 
 # get emails when there is a problem
-# ADMINS = [("John", "meinkejf@ucmail.uc.edu")]
+# ADMINS = [("John", "john.meinken@cchmc.org")]
 
 # If using a subdirectory, set correct URLs to use
 # FORCE_SCRIPT_NAME = "/neurobehavioral/"

@@ -3,7 +3,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="margin-bottom:20px;padding:2px;">
   <a class="navbar-brand" href="{% url 'home' %}" style="padding:0;font-size:1.4em;">
-  	<img src="{% static 'main/img/uc_curved_logo.png' %}" alt="" height="45" width="45">
+  	<img src="{% static 'main/img/childrens_icon.png' %}" alt="" height="45" width="45">
   	{{ SITE_TITLE }} &nbsp;
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,6 +38,7 @@
 		          {% if user.is_staff %}
 		          	<a class="dropdown-item" href="{% url 'admin:index' %}">Admin Backend</a>
 		          {% endif %}
+                  <a class="dropdown-item" href="{{ LOGOUT_URL_FOR_LINK }}">Sign Out</a>
 		        </div>
 		      </li>
     	{% endif %}
@@ -62,10 +63,6 @@
 	          {% if user.is_staff %}
 	          	<a class="dropdown-item" href="{% url 'admin:index' %}">Admin Backend</a>
 	          {% endif %}
-	          <a class="dropdown-item" target="_blank"
-	          	href="https://chi-tools.uc.edu/feedback/?resource=customer_portal&submitter_name={{user.get_full_name}}&submitter_email={{user.email}}">
-	          	Website Feedback
-	          </a>
 	          <a class="dropdown-item" href="{% url 'user_manager:logout' %}">Logout</a>
 	        </div>
 	      </li>
