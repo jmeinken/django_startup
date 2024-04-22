@@ -11,4 +11,4 @@ from django.contrib import messages
 @login_required
 def home(request):
     context = {}
-    return render(request, 'main/home.html', context)
+    return render(request, "main/home.html", context)

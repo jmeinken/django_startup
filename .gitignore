@@ -5,7 +5,7 @@ __pycache__/
 .settings
 .pydevproject
 
-settings_local.py
+settings.py
 settings_production.py
 
 *.sqlite3
