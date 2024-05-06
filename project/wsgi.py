@@ -1,5 +1,5 @@
 """
-WSGI config for chiron_dev2 project.
+WSGI config for standard Django project setup.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
